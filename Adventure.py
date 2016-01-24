@@ -35,7 +35,7 @@ def room_2():
     elif choice == "Forward":
         room_3()
     else:
-        dead("You didn't follow my directions.")
+        dead()
 #Defining room_3
 def room_3():
     print "You've entered the third room."
@@ -108,6 +108,7 @@ def clear():
     exit(0)
 #Defining dead by not following directions
 def dead():
+    print "You didn't follow my directions."
     exit(0)
 #Defining running out of candle.
 def darkness():
