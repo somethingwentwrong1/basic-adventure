@@ -1,14 +1,20 @@
-#It starts from system and ends by exit.
+'#' It starts from system and ends by exit.
 from sys import exit
-#Defining start
+'#' Defining start
+
+
 def start():
-    print "You are trapped in a dark room. You have a candle and a raw meat in front of you."
+    print "You are trapped in a dark room. You have a candle in front of you."
     print "A voice came out from the ceiling."
-    print "You weren't appreciating of your life. Let me teach you how marvelous a life is."
-    print "<<<Instruction: You can move to the next room only with a candle. The candle lasts for 2 moves."
+    print "You should be thankful of your life."
+    print "Let me teach you how marvelous a life is."
+    print "<<<Instruction: You can move to the next room only with a candle."
+    print "The candle lasts for 2 moves."
     print "The spare candle is in the room #3.>>>"
     room_1()
-#Defining room_1
+'#'Defining room_1
+
+
 def room_1():
     print "You've entered the first room. Which direction would you go?"
     print "Type Left, Right, or Forward"
@@ -22,7 +28,9 @@ def room_1():
         room_2()
     else:
         dead("You didn't follow my directions.")
-#Defining room_2
+'#'Defining room_2
+
+
 def room_2():
     print "You've entered the second room. Which direction would you go?"
     print "Type Left, Right, or Forward"
@@ -36,7 +44,9 @@ def room_2():
         room_3()
     else:
         dead()
-#Defining room_3
+'#'Defining room_3
+
+
 def room_3():
     print "You've entered the third room."
     print "You've found a spare candle."
@@ -52,7 +62,9 @@ def room_3():
         dead_end()
     else:
         dead("You didn't follow my directions.")
-#Defining room_4
+'#'Defining room_4
+
+
 def room_4():
     print "You've entered the fourth room. Which direction would you go?"
     print "Type Left, Right, or Forward"
@@ -66,10 +78,13 @@ def room_4():
         room_5()
     else:
         dead("You didn't follow my directions.")
-#Defining room_5
+'#'Defining room_5
+
+
 def room_5():
     print "You've entered the fifth room."
-    print "The light of the candle is very weak now. You need a spare candle to move."
+    print "The light of the candle is very weak now."
+    print "You need a spare candle to move."
     print "Which direction would you go?"
     print "Type Left, Right, or Forward"
 
@@ -82,7 +97,9 @@ def room_5():
         darkness()
     else:
         dead("You didn't follow my directions.")
-#Defining room_6
+'#'Defining room_6
+
+
 def room_6():
     print "You've entered the sixth room. Which direction would you go?"
     print "Type Left, Right, or Forward"
@@ -96,21 +113,29 @@ def room_6():
         clear()
     else:
         dead("You didn't follow my directions.")
-#Defining dead_end
+'#'Defining dead_end
+
+
 def dead_end():
     print "It is a dead end."
     print "Invisible wall snake swallowed your whole body."
     dead()
-#Defining clear
+'#'Defining clear
+
+
 def clear():
     print "Congratulations!"
     print "I hope you've understood how precious your life is.."
     exit(0)
-#Defining dead by not following directions
+'#'Defining dead by not following directions
+
+
 def dead():
     print "You didn't follow my directions."
     exit(0)
-#Defining running out of candle.
+'#'Defining running out of candle.
+
+
 def darkness():
     print "Your candle ran out."
     print "You try to walk without a candle."
@@ -120,7 +145,8 @@ def darkness():
     print "."
     print "."
     print "You've walked for an hour, but not even a single door appears."
-    print "Something from the dark suddenly grabbed you and you are not there anymore."
+    print "Something from the dark suddenly grabbed you."
+    print "You are not there anymore."
     exit(0)
-#starts start()
+'#'starts start()
 start()
